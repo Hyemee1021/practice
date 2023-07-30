@@ -1,0 +1,48 @@
+@rootAPI = http://localhost:8000/api/v1
+
+
+# ====== admin api 
+### Creare new admin
+POST {{rootAPI}}/admin
+Content-Type: application/json
+
+{
+"fName" : "Prem",
+"lName": "Acharya",
+"phone": "042345",
+"password": "ff",
+"email": "a@a.com",
+"address": ""
+}
+
+
+
+
+# ====== admin api 
+### POST Category
+POST {{rootAPI}}/category
+Content-Type: application/json
+
+{
+    "title": "Home Furniture"
+}
+
+### GET Categories
+GET {{rootAPI}}/category
+Content-Type: application/json
+ 
+{
+    "title": "Home Furniture"
+}
+
+# ====== siign in
+
+POST {{rootAPI}}/admin/sign-in
+Content-Type: application/json
+
+{
+
+"password": "ff",
+"email": "a@a.com",
+
+}
